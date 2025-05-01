@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-01T02:20:10.783870" rpa="false" schemaversion="5">
+<suite id="s1" name="Home Page Test" source="D:\WatchTronics_Test\WatchTronics_RPA\test\home_page_test.robot">
+<test id="s1-t1" name="Verify Home Page Title" line="10">
+<kw name="Open Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T02:20:11.169585" level="INFO">Opening browser 'chrome' to base url 'https://watchtronics-123.netlify.app/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T02:20:11.169319" elapsed="2.532842"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-01T02:20:13.703190" elapsed="0.062049"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:11.168601" elapsed="2.597193"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home_page">
+<kw name="Verify Page Title" owner="base_page">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-01T02:20:13.781763" level="INFO">Page title is 'React App'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-01T02:20:13.768412" elapsed="0.013555"/>
+</kw>
+<arg>${HOME_PAGE_TITLE}</arg>
+<status status="PASS" start="2025-05-01T02:20:13.767540" elapsed="0.014657"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:13.766706" elapsed="0.015660"/>
+</kw>
+<kw name="Close Application" owner="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T02:20:13.783481" elapsed="2.173659"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:13.782983" elapsed="2.174341"/>
+</kw>
+<doc>Verify the website title is correct</doc>
+<status status="PASS" start="2025-05-01T02:20:11.167764" elapsed="4.789912"/>
+</test>
+<test id="s1-t2" name="Navigate To Shop Page" line="14">
+<kw name="Open Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T02:20:15.960208" level="INFO">Opening browser 'chrome' to base url 'https://watchtronics-123.netlify.app/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T02:20:15.959994" elapsed="2.196159"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.156434" elapsed="0.040343"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:15.959719" elapsed="2.237426"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home_page">
+<kw name="Verify Page Title" owner="base_page">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-01T02:20:18.207229" level="INFO">Page title is 'React App'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.198890" elapsed="0.008512"/>
+</kw>
+<arg>${HOME_PAGE_TITLE}</arg>
+<status status="PASS" start="2025-05-01T02:20:18.198486" elapsed="0.009150"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:18.198099" elapsed="0.009696"/>
+</kw>
+<kw name="Click Shop Now" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SHOP_NOW_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.208958" elapsed="0.031203"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T02:20:18.241108" level="INFO">Clicking element 'xpath=//button[text()='Shop now']'.</msg>
+<arg>${SHOP_NOW_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.240612" elapsed="0.150839"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:18.208445" elapsed="0.183241"/>
+</kw>
+<kw name="Verify Product Page Loaded" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_LIST_CONTAINER}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.392980" elapsed="0.255533"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:18.392389" elapsed="0.256296"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-01T02:20:20.649899" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-01T02:20:18.649069" elapsed="2.000978"/>
+</kw>
+<kw name="Close Application" owner="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T02:20:20.650957" elapsed="2.171417"/>
+</kw>
+<status status="PASS" start="2025-05-01T02:20:20.650581" elapsed="2.171993"/>
+</kw>
+<doc>Verify Shop Now button redirects correctly</doc>
+<status status="PASS" start="2025-05-01T02:20:15.959173" elapsed="6.863685"/>
+</test>
+<doc>Tests for the home page functionality</doc>
+<status status="PASS" start="2025-05-01T02:20:10.785090" elapsed="12.039129"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Home Page Test" id="s1" pass="2" fail="0" skip="0">Home Page Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
