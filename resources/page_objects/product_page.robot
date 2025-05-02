@@ -4,7 +4,7 @@ Resource    base_page.robot
 Resource    ../locators/product_page_locators.robot
 
 *** Variables ***
-${WAIT_TIMEOUT}    10    # Seconds to wait for elements
+${WAIT_TIMEOUT}    10    
 
 *** Keywords ***
 Verify Product Page Loaded

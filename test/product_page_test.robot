@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Tests for the home page functionality
+Documentation   
 Resource    ../resources/keywords/common_keywords.robot
 Resource    ../resources/page_objects/home_page.robot
 Resource    ../resources/page_objects/product_page.robot
@@ -15,7 +15,7 @@ ${Search_Term_sports}    sports
 *** Test Cases ***
 
 Navigate To Shop Page
-    [Documentation]    Verify Shop Now button redirects correctly
+    [Documentation]    
     Verify Home Page Loaded
     Click Shop Now
     Verify Product Page Loaded
