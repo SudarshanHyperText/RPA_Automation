@@ -1,0 +1,4 @@
+results/* linguist-vendored
+test/log.html linguist-generated
+test/output.xml linguist-generated
+test/report.html linguist-generated
